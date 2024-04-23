@@ -1,0 +1,11 @@
+image: alpine/edge
+secrets:
+  - fe948673-a58e-412b-8659-fca489061e6b
+environment:
+  REPO: nawi
+  GH_USER: jkopanski
+tasks:
+  - push-to-github: |
+      cd ~/"${REPO}"
+      git config --global credential.helper store
+      git push --mirror "https://github.com/${GH_USER}/${REPO}"
