@@ -1,0 +1,22 @@
+# haskell
+*.hi
+*.o
+
+# cabal
+cabal.project.local*
+dist
+dist-newstyle
+dist-repl
+.ghc.environment.*
+.ghci_history
+.hie
+.build
+.log
+ghcid.log
+
+# nix
+result*
+
+# direnv
+.envrc-local
+.direnv/

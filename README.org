@@ -1,0 +1,9 @@
+#+title: Nats widgets
+#+author: Mad Nat
+
+This project are my custom desktop widgets.  It all started when I
+wanted to configure [[https://github.com/elkowar/eww][Elkowars Wacky Widgets (eww)]] to my liking.  By
+doing sometimes I wished for more control.  Given that most of the
+styling is done via CSS anyway, there is really no point of not just
+using underlying GTK directly, in the language of my preference.
+Seems that I wasn't the [[https://github.com/Aylur/ags][only one with this idea]].
