@@ -79,7 +79,7 @@ common common-rts-options
 common common-dependencies
   build-depends:
     , base >= 4.15 && < 5
-    , aeson ^>= 2.1
+    , aeson ^>= 2.2
     , autodocodec ^>= 0.2
     , chronos ^>= 1.1
     , clay
@@ -95,7 +95,7 @@ common common-dependencies
     , path ^>= 0.9
     , path-io ^>= 1.8
     , relude ^>= 1.2
-    -- , rhine ^>= 1.2
+    , rhine ^>= 1.4
     , text ^>= 2
     , transformers
     , uuid ^>= 1.3

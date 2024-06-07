@@ -21,7 +21,7 @@
             nawi =
               final.haskell-nix.project' {
                 src = ./.;
-                compiler-nix-name = "ghc94";
+                compiler-nix-name = "ghc98";
                 shell = {
                   tools = {
                     cabal = { };
