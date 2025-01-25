@@ -6,9 +6,13 @@
     nixpkgs.follows = "haskellNix/nixpkgs";
     utils.url = "github:numtide/flake-utils";
     nixgl.url = "github:nix-community/nixGL";
+    hlint = {
+      url = "github:ndmitchell/hlint";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, utils, haskellNix, nixgl }:
+  outputs = inputs@{ self, nixpkgs, utils, haskellNix, nixgl, ... }:
     let
       supportedSystems = [ "x86_64-linux" ];
     in
@@ -21,14 +25,14 @@
             nawi =
               final.haskell-nix.project' {
                 src = ./.;
-                compiler-nix-name = "ghc98";
+                compiler-nix-name = "ghc9101";
                 shell = {
                   tools = {
                     cabal = { };
                     cabal-hoogle = { };
                     fourmolu = { };
                     ghcid = { };
-                    hlint = { };
+                    hlint.src = inputs.hlint;
                     haskell-language-server = { };
                   };
                   buildInputs =
